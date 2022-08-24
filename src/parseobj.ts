@@ -92,7 +92,7 @@ function flipy(uv: Vec2): Vec2 {
 
 function surfaceNormal(ps: [Vec3, Vec3, Vec3]): Vec3 {
   const a = vec(ps[0], ps[1]);
-  const b = vec(ps[1], ps[2]);
+  const b = vec(ps[0], ps[2]);
   const v = cross(a, b);
   return div(v, len(v));
 }
